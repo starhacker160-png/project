@@ -1,6 +1,6 @@
 import {useEffect,useState} from 'react';
 import {PackagePlus, ShoppingCart, Trash2, Pencil, Plus, ReceiptText, X, Save} from 'lucide-react';
-const API=import.meta.env.VITE_API_URL || 'http://localhost:8080/api';
+const API=import.meta.env.VITE_API_URL || '/api';
 const money=n=>'₹'+Number(n||0).toFixed(2);
 export default function App(){
  const [products,setProducts]=useState([]),[cart,setCart]=useState([]),[tab,setTab]=useState('counter'),[form,setForm]=useState(null),[customer,setCustomer]=useState('Walk-in Customer'),[message,setMessage]=useState('');

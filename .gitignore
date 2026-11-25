@@ -6,6 +6,7 @@ frontend/dist/
 
 # Backend build output
 backend/target/
+backend/data/
 
 # Environment and secret files
 .env

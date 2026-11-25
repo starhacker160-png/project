@@ -1,26 +1,14 @@
-# Database Setup
+# Optional MySQL Database
 
-MySQL me database aur tables create karne ke liye project root se chalaayein:
+The project runs without MySQL by default, using a local H2 database stored in
+`backend/data/`. Use this SQL setup only when choosing the optional MySQL profile.
 
-```powershell
-mysql -u root -p < database\setup.sql
+Run the script from the project root:
+
+```sh
+mysql -u root -p < database/setup.sql
 ```
 
-Password poochhne par MySQL root password enter karein.
-
-Script following items create karega:
-
-- `shop_billing_db` database
-- `product` table
-- `sale` table
-- `sale_item` table
-- `sale_items` relationship table
-- Tea, Coffee, Biscuits aur Milk ke sample products
-
-Setup ke baad verification:
-
-```sql
-USE shop_billing_db;
-SHOW TABLES;
-SELECT * FROM product;
-```
+The script creates `shop_billing_db`, the product and sales tables, and sample
+products. Configure `backend/.env` and activate the `mysql` Spring profile as
+described in the root README.
